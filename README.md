@@ -7,8 +7,8 @@ BantuKetik adalah program sederhana yang berisi algoritma <i>autocomplete</i> se
 
 ## Author
 
-- Muhammad Asral 
-- Hadi Setiawan
-- Salman Amario Simpati
+- Muhammad Asral
+- Hadi Setiawan - [@Hdi28](https://github.com/Hdi28)
+- Salman Amario Simpati - [@salmanamariosimpati](https://github.com/salmanamariosimpati)
 - Ahmad Amin Badani - [@AminBadani](https://github.com/AminBadani)
 
