@@ -16,3 +16,7 @@
 - Menambahkan file `app.py` sebagai file untuk program utama
 - Menambahkan file `modules.py` berisi lgoritma yang digunakan untuk program utama
 - Menambahkan algoritma string matching
+  
+## Sabtu, 08 Maret 2025
+- Menambahkan *class* `ListKata` pada file `modules.py` untuk implementasi algoritma dynamic programming dan string matching
+- Menghapus function `update_list` pada file `modules.py`, diganti dengan `update_list` pada *class* `ListKata`
