@@ -15,3 +15,4 @@
 ## Selasa, 04 Maret 2025
 - Menambahkan file `app.py` sebagai file untuk program utama
 - Menambahkan file `modules.py` berisi lgoritma yang digunakan untuk program utama
+- Menambahkan algoritma string matching
