@@ -1,5 +1,6 @@
 import tkinter;
 from local.modules import open_dataset, update_list;
+from local.modules import ListKata;
 
 # Constant
 WIDTH = 500;
@@ -14,7 +15,7 @@ app = tkinter.Tk();
 # Untuk menentukan lebar dan tinggi window
 screen_resolution = str(WIDTH) + 'x' + str(HEIGHT);
 # Untuk menyimpan list kata yang ada di dalam dataset
-dataset = open_dataset('dataset_eng.txt');
+dataset = ListKata(open_dataset('dataset_eng.txt'));
 # Untuk menyimpan input pengguna
 input_word = tkinter.StringVar();
 
@@ -24,7 +25,8 @@ input_word = tkinter.StringVar();
 def on_change(*args):
     listbox_words.delete(0, 'end');
 
-    new_list = update_list(dataset, input_word.get())
+    new_list = dataset.update_list(input_word.get())
+    # new_list = update_list(dataset, input_word.get())
     for word in new_list:
         listbox_words.insert('end', word)
 
