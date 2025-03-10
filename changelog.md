@@ -20,3 +20,7 @@
 ## Sabtu, 08 Maret 2025
 - Menambahkan *class* `ListKata` pada file `modules.py` untuk implementasi algoritma dynamic programming dan string matching
 - Menghapus function `update_list` pada file `modules.py`, diganti dengan `update_list` pada *class* `ListKata`
+- 
+## Sabtu, 10 Maret 2025
+- Menambahkan fitur untuk mengganti isi dari *input_field* secara otomatis, berdasarkan kata yang dipilih di dalam list, ketika klik kiri pada mouse atau menekan enter pada keyboard
+- Memperbaiki list kata yang tidak muncul ketika input kata menggunakan huruf kapital
