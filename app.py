@@ -1,4 +1,5 @@
 import tkinter;
+import re;
 from local.modules import open_dataset;
 from local.modules import ListKata;
 
@@ -25,12 +26,11 @@ input_word = tkinter.StringVar();
 def input_on_change(*args):
     listbox_words.delete(0, 'end');
 
-    new_list = dataset.update_list(input_word.get())
-    # new_list = update_list(dataset, input_word.get())
-    for word in new_list:
-        listbox_words.insert('end', word)
-
-    return True;
+    # Pastikan input yang dimasukkan pengguna adalah alfabet
+    if (re.match('^[a-z]+$', input_word.get(), re.IGNORECASE) != None):
+        new_list = dataset.update_list(input_word.get())
+        for word in new_list:
+            listbox_words.insert('end', word)
 
 # Dipanggil ketika listbox di klik menekan enter atau klik kiri pada mouse
 def listbox_on_select(event):
