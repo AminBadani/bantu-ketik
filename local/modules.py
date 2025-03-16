@@ -23,7 +23,7 @@ class ListKata:
         list_rekomendasi = [];
 
         # Cek apakah input kata sudah pernah di ketik
-        # jika iya, maka ambil dari list kata dari history
+        # jika iya, maka ambil list kata dari history
         if (input_kata in self.history): 
             self.list_lama = self.history[input_kata]
             self.input_lama = input_kata
@@ -33,25 +33,18 @@ class ListKata:
         if (len(self.list_lama) == 0): 
             # Cari melalui dataset
             for kata in self.dataset:
-                    if prefix.match(kata):
-                        list_rekomendasi.append(kata)
-
+                    if prefix.match(kata): list_rekomendasi.append(kata)
         else: 
-            # Cari melalui dataset
-            # Karena pengguna tidak menambahkan input di akhir string
+            # Cari melalui dataset ketika:
+            # pengguna tidak menambahkan input di akhir string
             # atau pengguna menghapus huruf dalam input
             if (input_kata[:len(self.input_lama)] != self.input_lama or len(input_kata) < len(self.input_lama)): 
-                # Cari melalui dataset
                 for kata in self.dataset:
-                    if prefix.match(kata):
-                        list_rekomendasi.append(kata)
-
+                    if prefix.match(kata): list_rekomendasi.append(kata)
             else:
                 # Cari melalui list_lama
                 for kata in self.list_lama:
-                    if prefix.match(kata):
-                        list_rekomendasi.append(kata)
-
+                    if prefix.match(kata): list_rekomendasi.append(kata)
 
         # Masukkan hasil yang ada di dalam list_rekomendasi ke list_lama
         self.list_lama = list_rekomendasi
