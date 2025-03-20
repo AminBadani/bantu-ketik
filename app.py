@@ -5,7 +5,7 @@ from local.modules import ListKata;
 
 # Constant
 WIDTH = 500;
-HEIGHT = 400;
+HEIGHT = 500;
 PADDING = 10;
 
 
@@ -59,10 +59,10 @@ app.resizable(False,False);
 app.bind("<Key>", keyboard_on_press);
 
 # Input yang digunakan pengguna untuk mengetikkan kata
-input_field = tkinter.Entry(app, textvariable=input_word);
+input_field = tkinter.Entry(app, textvariable=input_word, font=('Arial', 20));
 input_word.trace_add(['write'], input_on_change);
 # List kata yang ditampilakan ke pengguna
-listbox_words = tkinter.Listbox(app, height=HEIGHT,)
+listbox_words = tkinter.Listbox(app, height=HEIGHT, font=('Arial', 20))
 listbox_words.bind("<Return>", listbox_on_select);
 listbox_words.bind("<Button>", listbox_on_select);
 # Konfigurasi tata letak
