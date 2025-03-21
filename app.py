@@ -32,7 +32,7 @@ def input_on_change(*args):
         for word in new_list:
             listbox_words.insert('end', word)
 
-# Dipanggil ketika listbox di klik menekan enter atau klik kiri pada mouse
+# Dipanggil ketika menekan enter atau klik kiri pada mouse
 def listbox_on_select(event):
     if (listbox_words.index('end') != 0):
         # Mengambil index dari kata yang dipilih
